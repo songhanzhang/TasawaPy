@@ -1,5 +1,6 @@
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
+from Tasawa import *
 
 work_path = '/Users/songhan.zhang/Documents/Julia/2023-Julia-v1205-SAFE/'
 
@@ -28,3 +29,10 @@ n_elements = Elements.shape[0]
 
 Materials = np.array([ [ 1, (2e11, 7850, 0.3) ] ] , dtype = object)
 Reals = np.array([ [ 1, (1) ] ], dtype = object)
+
+plt.figure(figsize = (6.4,4.8))
+# fig_model, ax = plt.subplots(6.4, 4.8)
+fig, ax = plt.subplots()
+# ax.scatter(Nodes[:,1], Nodes[:,2], marker = 'o', c = 'red')
+ax.scatter([3,8,2], [1,5,8], marker = 'o', c = 'red')
+plt.show()
