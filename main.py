@@ -30,6 +30,7 @@ n_elements = Elements.shape[0]
 Materials = np.array([ [ 1, (2e11, 7850, 0.3) ] ] , dtype = object)
 Reals = np.array([ [ 1, (1) ] ], dtype = object)
 
-plt.figure(figsize = (6.4,4.8))
+plt.figure(figsize = (6.4,6.4))
 plt.scatter(Nodes[:,1], Nodes[:,2], s = 10, c = "dodgerblue", marker = "o")
+plt.axis("equal")
 plt.show()
