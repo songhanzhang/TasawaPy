@@ -87,6 +87,20 @@ coor_interp = np.array([
     [ 0.0,  0.1 ]
 ])
 n_interp = coor_interp.shape[0]
+x_profile = np.zeros(n_interp)
+y_profile = np.zeros(n_interp)
+for i_interp in range(n_interp):
+    xi  = coor_interp[i_interp,0]
+    eta = coor_interp[i_interp,1]
+    Nb = np.zeros(6)
+    Nb[0] = (1-xi-eta) * (1-2*xi-2*eta)
+    Nb[1] = xi * (2*xi-1)
+    Nb[2] = eta * (2*eta-1)
+    Nb[3] = 4 * xi * (1-xi-eta)
+    Nb[4] = 4 * xi * eta
+    Nb[5] = 4 * eta * (1-xi-eta)
+    x_profile[i_interp] = np.dot(Nb,x)
+    y_profile[i_interp] = np.dot(Nb,y)
 
 plt.axis("equal")
 plt.show()
