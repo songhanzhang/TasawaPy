@@ -32,5 +32,61 @@ Reals = np.array([ [ 1, (1) ] ], dtype = object)
 
 plt.figure(figsize = (6.4,6.4))
 plt.scatter(Nodes[:,1], Nodes[:,2], s = 15, c = "dodgerblue", marker = "o")
+
+i_e = 1
+node_1 = Elements[i_e-1,4][0]
+node_2 = Elements[i_e-1,4][1]
+node_3 = Elements[i_e-1,4][2]
+node_4 = Elements[i_e-1,4][3]
+node_5 = Elements[i_e-1,4][4]
+node_6 = Elements[i_e-1,4][5]
+x = np.zeros(6)
+y = np.zeros(6)
+x[0] = Nodes[node_1-1,1]
+y[0] = Nodes[node_1-1,2]
+x[1] = Nodes[node_2-1,1]
+y[1] = Nodes[node_2-1,2]
+x[2] = Nodes[node_3-1,1]
+y[2] = Nodes[node_3-1,2]
+x[3] = Nodes[node_4-1,1]
+y[3] = Nodes[node_4-1,2]
+x[4] = Nodes[node_5-1,1]
+y[4] = Nodes[node_5-1,2]
+x[5] = Nodes[node_6-1,1]
+y[5] = Nodes[node_6-1,2]
+coor_interp = np.array([
+    [ 0.0,  0.0 ],
+    [ 0.1,  0.0 ],
+    [ 0.2,  0.0 ],
+    [ 0.3,  0.0 ],
+    [ 0.4,  0.0 ],
+    [ 0.5,  0.0 ],
+    [ 0.6,  0.0 ],
+    [ 0.7,  0.0 ],
+    [ 0.8,  0.0 ],
+    [ 0.9,  0.0 ],
+    [ 1.0,  0.0 ],
+    [ 0.9,  0.1 ],
+    [ 0.8,  0.2 ],
+    [ 0.7,  0.3 ],
+    [ 0.6,  0.4 ],
+    [ 0.5,  0.5 ],
+    [ 0.4,  0.6 ],
+    [ 0.3,  0.7 ],
+    [ 0.2,  0.8 ],
+    [ 0.1,  0.9 ],
+    [ 0.0,  1.0 ],
+    [ 0.0,  0.9 ],
+    [ 0.0,  0.8 ],
+    [ 0.0,  0.7 ],
+    [ 0.0,  0.6 ],
+    [ 0.0,  0.5 ],
+    [ 0.0,  0.4 ],
+    [ 0.0,  0.3 ],
+    [ 0.0,  0.2 ],
+    [ 0.0,  0.1 ]
+])
+n_interp = coor_interp.shape[0]
+
 plt.axis("equal")
 plt.show()
