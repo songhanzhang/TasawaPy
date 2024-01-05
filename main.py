@@ -39,4 +39,4 @@ plt.axis("equal")
 plt.savefig("fig_model.pdf")
 plt.show()
 
-np.save("Nodes.npy",Nodes)
+np.savez("Nodes.npy", Nodes = Nodes, Elements = Elements)
