@@ -40,3 +40,8 @@ plt.savefig("fig_model.pdf")
 plt.show()
 
 np.savez('model.npz', Nodes = Nodes, Elements = Elements, Materials = Materials, Reals = Reals)
+model = np.load('model.npz')
+Nodes = model['Nodes']
+Elements = model['Elements']
+Materials = model['Materials']
+Reals = model['Reals']
