@@ -76,12 +76,11 @@ def plt_nodes(Nodes):
     plt.scatter(Nodes[:,1], Nodes[:,2], s = 15, c = "dodgerblue", marker = "o")
 
 def gen_list_DOF(n_nodes,n_dir):
-    n_DOF = length(n_dir_list) * n_nodes
     list_DOF = zeros(n_DOF,2)
     counter = 0
     for i_node in range(n_nodes):
-        for i_dir in range(n_dir_list):
+        for i_dir in n_dir:
             counter += 1
             list_DOF[counter,1] = counter
-            list_DOF[counter,2] = i_node + 0.1*n_dir_list[i_dir]
-    return n_DOF, list_DOF
+            list_DOF[counter,2] = i_node + 0.1*i_dir
+    return list_DOF
