@@ -55,3 +55,12 @@ K2g = np.zeros((n_DOF,n_DOF))
 K3g = np.zeros((n_DOF,n_DOF))
 Mg  = np.zeros((n_DOF,n_DOF))
 
+for i_e in range(n_elements):
+    if Elements[i_e,1] == "2D_QuadTriangle":
+        node_1 = Elements[i_e,4][0]
+        node_2 = Elements[i_e,4][1]
+        node_3 = Elements[i_e,4][2]
+        node_4 = Elements[i_e,4][3]
+        node_5 = Elements[i_e,4][4]
+        node_6 = Elements[i_e,4][5]
+        # print(node_1,node_2,node_3,node_4,node_5,node_6)
