@@ -31,6 +31,7 @@ Materials = np.array([ [ 1, (2e11, 7850, 0.3) ] ] , dtype = object)
 Reals = np.array([ [ 1, (1) ] ], dtype = object)
 
 # plt.figure(figsize = (6.4,6.4))
+"""
 fig, ax = plt.subplots(figsize = (6.4,6.4))
 ax.tick_params(direction = 'in')
 plt_elements(Nodes,Elements)
@@ -45,5 +46,12 @@ Nodes = model['Nodes']
 Elements = model['Elements']
 Materials = model['Materials']
 Reals = model['Reals']
+"""
 
 list_DOF = gen_list_DOF(n_nodes,np.array([1,2,3]))
+n_DOF = list_DOF.shape[0]
+K1g = np.zeros(n_DOF)
+K2g = np.zeros(n_DOF)
+K3g = np.zeros(n_DOF)
+Mg  = np.zeros(n_DOF)
+
