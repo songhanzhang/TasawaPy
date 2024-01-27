@@ -131,4 +131,10 @@ for i_e in range(n_elements):
             xi  = Gauss[i_Gauss,0]
             eta = Gauss[i_Gauss,1]
             H   = Gauss[i_Gauss,2]
-            
+            Nb = np.zeros(6)
+            Nb[0] = (1-xi-eta) * (1-2*xi-2*eta)
+            Nb[1] = xi * (2*xi-1)
+            Nb[2] = eta * (2*eta-1)
+            Nb[3] = 4 * xi * (1-xi-eta)
+            Nb[4] = 4 * xi * eta
+            Nb[5] = 4 * eta * (1-xi-eta)
