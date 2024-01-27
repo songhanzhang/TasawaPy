@@ -138,3 +138,17 @@ for i_e in range(n_elements):
             Nb[3] = 4 * xi * (1-xi-eta)
             Nb[4] = 4 * xi * eta
             Nb[5] = 4 * eta * (1-xi-eta)
+            dN_dxi = np.zeros(6)
+            dN_dxi[0] = 4*eta + 4*xi - 3
+            dN_dxi[1] = 4*xi - 1
+            dN_dxi[2] = 0
+            dN_dxi[3] = 4 - 8*xi - 4*eta
+            dN_dxi[4] = 4*eta
+            dN_dxi[5] = -4*eta
+            dN_deta = np.zeros(6)
+            dN_deta[0] = 4*eta + 4*xi - 3
+            dN_deta[1] = 0
+            dN_deta[2] = 4*eta - 1
+            dN_deta[3] = -4*xi
+            dN_deta[4] = 4*eta
+            dN_deta[5] = 4 - 4*xi - 8*eta
