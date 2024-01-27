@@ -156,4 +156,8 @@ for i_e in range(n_elements):
             dy_dxi  = np.dot(dN_dxi,y)
             dx_deta = np.dot(dN_deta,x)
             dy_deta = np.dot(dN_deta,y)
-            
+            J = np.array([
+                [dx_dxi,  dy_dxi],
+                [dx_deta, dy_deta]
+            ])
+            # print(np.linalg.det(J))
