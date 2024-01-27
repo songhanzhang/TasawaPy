@@ -64,3 +64,18 @@ for i_e in range(n_elements):
         node_5 = Elements[i_e,4][4]
         node_6 = Elements[i_e,4][5]
         # print(node_1,node_2,node_3,node_4,node_5,node_6)
+        x = np.zeros(6)
+        y = np.zeros(6)
+        # print(x)
+        x[0] = Nodes[node_1-1,1]
+        y[0] = Nodes[node_1-1,2]
+        x[1] = Nodes[node_2-1,1]
+        y[1] = Nodes[node_2-1,2]
+        x[2] = Nodes[node_3-1,1]
+        y[2] = Nodes[node_3-1,2]
+        x[3] = Nodes[node_4-1,1]
+        y[3] = Nodes[node_4-1,2]
+        x[4] = Nodes[node_5-1,1]
+        y[4] = Nodes[node_5-1,2]
+        x[5] = Nodes[node_6-1,1]
+        y[5] = Nodes[node_6-1,2]
