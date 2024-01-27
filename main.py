@@ -152,3 +152,8 @@ for i_e in range(n_elements):
             dN_deta[3] = -4*xi
             dN_deta[4] = 4*eta
             dN_deta[5] = 4 - 4*xi - 8*eta
+            dx_dxi  = np.dot(dN_dxi,x)
+            dy_dxi  = np.dot(dN_dxi,y)
+            dx_deta = np.dot(dN_deta,x)
+            dy_deta = np.dot(dN_deta,y)
+            
