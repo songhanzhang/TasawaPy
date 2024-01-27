@@ -79,3 +79,8 @@ for i_e in range(n_elements):
         y[4] = Nodes[node_5-1,2]
         x[5] = Nodes[node_6-1,1]
         y[5] = Nodes[node_6-1,2]
+        i_mat = Elements[i_e,2]
+        E = Materials[i_mat-1,1][0]
+        rho = Materials[i_mat-1,1][1]
+        nu = Materials[i_mat-1,1][2]
+        # print("E = ", E, "rho = ",rho,"nu = ",nu)
