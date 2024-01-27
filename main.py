@@ -161,3 +161,5 @@ for i_e in range(n_elements):
                 [dx_deta, dy_deta]
             ])
             # print(np.linalg.det(J))
+            dN_dx = np.zeros(6)
+            dN_dy = np.zeros(6)
