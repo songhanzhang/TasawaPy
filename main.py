@@ -126,3 +126,9 @@ for i_e in range(n_elements):
             [ 0.4459484909,  0.4459484909,  0.2233815897 ],
             [ 0.1081030182,  0.4459484909,  0.2233815897 ]
         ])
+
+        for i_Gauss in range(6):
+            xi  = Gauss[i_Gauss,0]
+            eta = Gauss[i_Gauss,1]
+            H   = Gauss[i_Gauss,2]
+            
