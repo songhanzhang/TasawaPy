@@ -50,8 +50,8 @@ Reals = model['Reals']
 
 list_DOF = gen_list_DOF(n_nodes,np.array([1,2,3]))
 n_DOF = list_DOF.shape[0]
-K1g = np.zeros(n_DOF)
-K2g = np.zeros(n_DOF)
-K3g = np.zeros(n_DOF)
-Mg  = np.zeros(n_DOF)
+K1g = np.zeros((n_DOF,n_DOF))
+K2g = np.zeros((n_DOF,n_DOF))
+K3g = np.zeros((n_DOF,n_DOF))
+Mg  = np.zeros((n_DOF,n_DOF))
 
