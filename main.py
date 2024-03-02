@@ -31,6 +31,7 @@ Materials = np.array([ [ 1, (2e11, 7850, 0.3) ] ] , dtype = object)
 Reals = np.array([ [ 1, (1) ] ], dtype = object)
 
 # plt.figure(figsize = (6.4,6.4))
+
 """
 fig, ax = plt.subplots(figsize = (6.4,6.4))
 ax.tick_params(direction = 'in')
