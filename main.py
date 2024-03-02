@@ -4,7 +4,7 @@ from Tasawa import *
 
 work_path = '/Users/songhan.zhang/Documents/Julia/2023-Julia-v1205-SAFE/'
 
-Nodes = np.array([ [ 1,  0,  0 ],
+Nodes = np.array([ [ 1,  0,     0 ],
                    [ 2,  0.05,  0 ],
                    [ 3,  0.05*np.cos(np.pi/4),  0.05*np.sin(np.pi/4) ],
                    [ 4,  0.05*np.cos(2*np.pi/4),  0.05*np.sin(2*np.pi/4) ],
